@@ -2,22 +2,17 @@ console.log("helooooooo");
 
 const bcrypt = require('bcrypt');
 
-
-var a = "Ana Paula Santos Ferreira";
-
-cont b = metodoCriptografa();
-
-console.log();
+const retorno = bcrypt.hashSync("ana Pula Santos Ferreira", 10);
+console.log(retorno);
 
 
+iniciar();
 
-async function metodoCriptografa(){
-
-    return await bcrypt.hash(a, 10);
-    
+async function iniciar() {
+   const result = await metodoCriptografa();
+   console.log(result);
 }
 
-
-async function criptografa(){
-    
+async function metodoCriptografa(){
+    return await bcrypt.hash("lucas", 10);    
 }
